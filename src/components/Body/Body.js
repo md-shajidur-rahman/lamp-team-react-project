@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
-import Product from '../Product/Product';
+import Person from '../Person/Person';
 
-const Store = () => {
+const Body = () => {
 
-    const [products, setProducts] = useState([]);
+    const [persons, setPersons] = useState([]);
 
     // state declaration for cart
 
     const [cart, setCart] = useState([]);
 
-    const handleAddProduct = (product) => {
-        const newCart = [...cart, product];
+    const handleAddPerson = (person) => {
+        const newCart = [...cart, person];
         setCart(newCart)
     }
 
     useEffect( () => {
-        fetch('/printItemsData.json')
+        fetch('/lampTeamData.json')
         .then(res => res.json())
-        .then(data => setProducts(data));
+        .then(data => setPersons(data));
     } , [])
     return (
         <div>
@@ -26,13 +26,14 @@ const Store = () => {
                 <div className="col-md-9">
                     <div className="row">
                         {
-                            products.map(product => 
-                            <Product
-                            product={product}
-                            handleAddProduct={handleAddProduct}
+                            persons.map(person => 
+                            <Person
+                            key={person.id}
+                            person={person}
+                            handleAddPerson={handleAddPerson}
                             >
 
-                            </Product> )
+                            </Person> )
                         }
            
                     </div>
@@ -49,4 +50,4 @@ const Store = () => {
     );
 };
 
-export default Store;
+export default Body;

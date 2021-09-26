@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
-import Store from './components/Store/Store';
+import Body from './components/Body/Body';
 
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Store></Store>
+      <Body></Body>
     </div>
   );
 }
