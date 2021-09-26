@@ -1,9 +1,24 @@
 import React from 'react';
 
-const Cart = () => {
+const Cart = (props) => {
+    const {cart}= props || {}
+
+    const totalReducer = (previousValue, currentValue) => previousValue + currentValue.price;
+    const total = cart.reduce(totalReducer, 0);
+
     return (
         <div>
-            <h3><i className="fas fa-shopping-cart"></i></h3>
+            <h4>
+            <b>Items Added: </b>
+              {cart.length}
+            </h4>
+
+            <ul>
+                {
+                    cart.map(product=> <li> {product.name} </li> )
+                }
+            </ul>
+            <h4><b>Total Cost: £ </b>{total}</h4>
         </div>
     );
 };

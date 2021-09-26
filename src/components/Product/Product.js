@@ -20,7 +20,9 @@ const Product = (props) => {
                 <p className="card-text"><b>Price:</b> £{price}</p>
             </div>
             <div className="card-footer d-flex justify-content-end">
-            <a href="#" className="btn btn-primary"><i className="fas fa-shopping-cart"></i> Add to Cart</a>
+            <button 
+            onClick={()=>props.handleAddProduct(props.product)}
+            className="btn btn-primary"><i className="fas fa-shopping-cart"></i> Add to Cart</button>
             </div>
             </div>
         </div>
