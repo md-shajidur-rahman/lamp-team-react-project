@@ -1,3 +1,15 @@
+## Who is LAMP:
+
+LAMP is a charity organization brought to you by Leads Alliance BD Ltd. Our main ambitions is working for better Human life for the poeple of the World.
+
+## Learn More:
+
+You can learn more about our activities from our Facebook Page (https://www.facebook.com/Lamp786)
+
+## Find more information about our Founders from the below website link:
+
+(https://the-superhero-direction-md-shajidur-rahman.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
